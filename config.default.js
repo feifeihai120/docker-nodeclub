@@ -122,11 +122,11 @@ var config = {
 
 // Get db config from env
 function _getMongoUrl(){
-  var db_addr = process.env.MONGO_CARROT_ADDR;
-  var db_port = process.env.MONGO_CARROT_PORT;
-  var db_user = process.env.MONGO_CARROT_USER;
-  var db_pass = process.env.MONGO_CARROT_PASS;
-  var db_database =  process.env.MONGO_CARROT_DATABASE;
+  var db_addr = process.env.MONGODB_PORT_27017_TCP_ADDR;
+  var db_port = process.env.MONGODB_PORT_27017_TCP_PORT;
+  var db_user = process.env.MONGODB_USERNAME;
+  var db_pass = process.env.MONGODB_PASSWORD;
+  var db_database =  process.env.MONGODB_INSTANCE_NAME;
   var db_url  = 'mongodb://';
   if (db_user && db_pass) {
     db_url += (db_user + ':' + db_pass + '@');
